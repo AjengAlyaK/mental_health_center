@@ -13,7 +13,7 @@ class HomeController extends Controller
 {
     public function redirect()
     {
-        $usertype = Auth::user()->usertype;
+        $usertype = Auth::user()->user_type;
 
         if($usertype == '1'){
             $user = User::all();
@@ -53,7 +53,7 @@ class HomeController extends Controller
 
     public function user()
     {
-        $user = User::all();
+        $user = User::where('user_type', '=',  '0')->get();
         return view('admin.pengguna', compact('user'));
     }
 }

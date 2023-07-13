@@ -20,8 +20,8 @@
                 <li><a href="#team" class="smoothScroll">Doctors</a></li>
                 <li><a href="#news" class="smoothScroll">News</a></li>
                 <li><a href="#google-map" class="smoothScroll">Contact</a></li> --}}
-                <li><a href="/register" class="smoothScroll">Sign In</a></li>
                 <li class="appointment-btn"><a href="/login">Log In</a></li>
+                <li><a href="/register" class="smoothScroll">Sign Up</a></li>
             </ul>
         </div>
 
