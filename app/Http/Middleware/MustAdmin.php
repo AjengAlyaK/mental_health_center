@@ -18,7 +18,7 @@ class MustAdmin
     {
         // bisa melewati middleware jika role = admin
         if (Auth::user()->user_type != 1){
-            abort(404);
+            return redirect()->back();
         }
         
         return $next($request);

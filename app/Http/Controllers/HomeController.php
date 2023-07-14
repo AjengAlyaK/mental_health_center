@@ -35,17 +35,6 @@ class HomeController extends Controller
         return redirect('/');
     }
 
-    // public function back()
-    // {
-    //     // $usertype = Auth::user()->usertype;
-
-    //     if((Auth::check()) && Auth::user()->usertype == 0){
-    //         return view('admin.user');
-    //     } else {
-    //         return view('user.home');
-    //     }
-    // }
-
     public function login()
     {
         return view('auth.login');

@@ -21,26 +21,6 @@
     <!-- HOME -->
     @include('design.home')
 
-    <!-- ABOUT -->
-    {{-- @include('design.about') --}}
-
-    <!-- TEAM -->
-    {{-- @include('design.team') --}}
-
-
-    <!-- NEWS -->
-    {{-- @include('design.news') --}}
-
-    <!-- MAKE AN APPOINTMENT -->
-    {{-- @include('design.makeAnAppointment') --}}
-
-
-    <!-- GOOGLE MAP -->
-    {{-- @include('design.googleMap')           --}}
-
-
-    <!-- FOOTER -->
-
     <!-- SCRIPTS -->
     @include('design.script')
 
