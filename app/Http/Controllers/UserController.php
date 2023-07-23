@@ -20,7 +20,18 @@ class UserController extends Controller
     public function update_profile(Request $request, $id)
     {
         $profile = User::findOrfail($id);
-        $profile->update($request->all());
+        $profile->name = $request->name;
+        $profile->email = $request->email;
+        $profile->phone = $request->phone;
+        $profile->address = $request->address;
+
+        $image = $request->profile_photo_path;
+        $imagename = time().'.'.$image->getClientOriginalExtension();
+        $image->move('image', $imagename);
+
+        $profile->profile_photo_path = $imagename;
+        $profile->update();
+        // $profile->update($request->all());
 
         return redirect()->back()->with('status', 'Profile berhasil diperbaharui');
     }

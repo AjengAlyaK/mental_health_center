@@ -89,14 +89,16 @@ data-template="vertical-menu-template-free"
                             </div>
                             @endif
                         <div class="d-flex align-items-start align-items-sm-center gap-4">
+                        <form action="/update_profile/{{$id->id}}" id="formAccountSettings" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <img
-                            src="sneat-1.0.0/assets/img/avatars/profile.jpg"
+                            {{-- src="sneat-1.0.0/assets/img/avatars/profile.jpg" --}}
                             alt="user-avatar"
                             class="d-block rounded"
-                            height="100"
+                            {{-- height="100" --}}
                             width="100"
                             id="uploadedAvatar"
-                            />
+                            src="/image/{{$id->profile_photo_path}}"/>
                             <div class="button-wrapper">
 
                             </div>
@@ -104,8 +106,8 @@ data-template="vertical-menu-template-free"
                         </div>
                         <hr class="my-0" />
                         <div class="card-body">
-                        <form action="/update_profile/{{$id->id}}" id="formAccountSettings" method="POST">
-                            @csrf
+                        {{-- <form action="/update_profile/{{$id->id}}" id="formAccountSettings" method="POST"> --}}
+                            {{-- @csrf --}}
                             <div class="row">
                             <div class="mb-3 col-md-6">
                                 <label for="firstName" class="form-label">Nama</label>
@@ -146,6 +148,10 @@ data-template="vertical-menu-template-free"
                             <div class="mb-3 col-md-6">
                                 <label for="address" class="form-label">Alamat</label>
                                 <input value="{{$id->address}}" autocomplete = "off" type="text" class="form-control" id="address" name="address" />
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="profile_photo_path" class="form-label">Foto Profile</label>
+                                <input type="file" value="{{$id->profile_photo_path}}" autocomplete="off" class="form-control" id="profile_photo_path" name="profile_photo_path">
                             </div>
                             </div>
                         
