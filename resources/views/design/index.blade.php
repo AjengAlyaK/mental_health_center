@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <title>Mental Health Center</title>
     @include('design.head')
 </head>
@@ -14,12 +13,28 @@
     <!-- HEADER -->
     @include('design.header')
 
-
     <!-- MENU -->
     @include('design.menu2')
 
     <!-- HOME -->
     @include('design.home')
+
+    <!-- ABOUT -->
+    @include('design.about')
+
+    <!-- TEAM -->
+    @include('design.team')
+
+    <!-- NEWS -->
+    @include('design.news')
+
+    <!-- MAKE AN APPOINTMENT -->
+    @include('design.makeAnAppointment')
+
+    <!-- GOOGLE MAP -->       
+
+    <!-- FOOTER -->
+    @include('design.footer')
 
     <!-- SCRIPTS -->
     @include('design.script')

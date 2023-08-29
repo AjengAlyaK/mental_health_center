@@ -11,6 +11,13 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+    function welcome(){
+        $doctor = Doctor::all();
+        $news = News::all();
+        $id = Auth::user();
+        return view('welcome', compact(['doctor', 'news', 'id']));
+    }
+
     public function redirect()
     {
         $usertype = Auth::user()->user_type;
